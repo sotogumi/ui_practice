@@ -15,9 +15,9 @@ class PlayRecently extends StatelessWidget {
           color: Colors.grey,
           borderRadius: BorderRadius.circular(10),
         ),
-        margin: const EdgeInsets.only(left: 4, top: 4),
-        width: 150,
-        height: 50,
+        
+        width: 180,
+        height: 60,
         child: Row(
           children: [
             ClipRRect(

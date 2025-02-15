@@ -8,7 +8,7 @@ class WhiteText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Padding(
-                padding: const EdgeInsets.fromLTRB(16, 12, 12, 0),
+        padding: const EdgeInsets.only(left: 16),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(

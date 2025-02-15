@@ -5,15 +5,12 @@ class Recommendation extends StatelessWidget {
   final String recommendation;
 
   @override
-  Widget build(BuildContext context) => Align(
-      alignment: Alignment.centerLeft,
-      child: Padding(
+  Widget build(BuildContext context) => Padding(
         padding: const EdgeInsets.only(left: 16),
         child: Image.network(
           recommendation,
           width: 150,
           height: 150,
         ),
-      ),
-    );
+      );
 }
