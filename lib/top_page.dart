@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
+import 'package:ui_practice/colors.dart';
 import 'package:ui_practice/components/play_recently.dart';
 import 'package:ui_practice/components/recommendation.dart';
 import 'package:ui_practice/components/top_text.dart';
@@ -13,30 +14,34 @@ class FirstPage extends HookWidget {
   Widget build(BuildContext context) {
     final choicedIndex = useState(0);
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColor.spBlack,
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Row(
-          children: [
-            CircleAvatar(
-              radius: 12,
-            ),
-            TopText(
-              topText: 'すべて',
-              index: 0,
-              choicedIndex: choicedIndex,
-            ),
-            TopText(
-              topText: '音楽',
-              index: 1,
-              choicedIndex: choicedIndex,
-            ),
-            TopText(
-              topText: 'ポッドキャスト',
-              index: 2,
-              choicedIndex: choicedIndex,
-            ),
-          ],
+        backgroundColor: AppColor.spBlack,
+        title: SizedBox(
+          height: 60,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              const CircleAvatar(
+                radius: 12,
+              ),
+              TopText(
+                topText: 'すべて',
+                index: 0,
+                choicedIndex: choicedIndex,
+              ),
+              TopText(
+                topText: '音楽',
+                index: 1,
+                choicedIndex: choicedIndex,
+              ),
+              TopText(
+                topText: 'ポッドキャスト',
+                index: 2,
+                choicedIndex: choicedIndex,
+              ),
+            ],
+          ),
         ),
       ),
       body: SingleChildScrollView(
