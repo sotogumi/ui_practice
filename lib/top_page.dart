@@ -23,20 +23,23 @@ class FirstPage extends HookWidget {
             scrollDirection: Axis.horizontal,
             children: [
               const CircleAvatar(
-                radius: 12,
+                radius: 16,
               ),
+              const Gap(16),
               TopText(
-                topText: 'すべて',
+                topText: 'すべて       ',
                 index: 0,
                 choicedIndex: choicedIndex,
               ),
+              const Gap(12),
               TopText(
-                topText: '音楽',
+                topText: '音楽     ',
                 index: 1,
                 choicedIndex: choicedIndex,
               ),
+              const Gap(12),
               TopText(
-                topText: 'ポッドキャスト',
+                topText: 'ポッドキャスト                 ',
                 index: 2,
                 choicedIndex: choicedIndex,
               ),
