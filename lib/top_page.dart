@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:ui_practice/colors.dart';
+import 'package:ui_practice/components/artist_icon.dart';
 import 'package:ui_practice/components/play_recently.dart';
 import 'package:ui_practice/components/recommendation.dart';
 import 'package:ui_practice/components/top_text.dart';
@@ -24,6 +25,9 @@ class FirstPage extends HookWidget {
             children: [
               const CircleAvatar(
                 radius: 16,
+                backgroundImage: NetworkImage(
+                  'https://th.bing.com/th/id/OIP.6uB1w4twL0bPylVHg3jtbwHaGh?w=232&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+                ),
               ),
               const Gap(16),
               TopText(
@@ -47,6 +51,7 @@ class FirstPage extends HookWidget {
           ),
         ),
       ),
+      
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -162,62 +167,49 @@ class FirstPage extends HookWidget {
               ),
               const Gap(16),
               const WhiteText(whiteText: 'おすすめのアーティスト'),
-              const Gap(8),
               SizedBox(
-                height: 150,
+                height: 250,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: const [
-                    Padding(
-                      padding: EdgeInsets.only(top: 24, left: 4),
-                      child: CircleAvatar(
-                        radius: 75,
-                        backgroundImage: NetworkImage(
+                    Gap(8),
+                    ArtistIcon(
+                      artistName: 'ReoNa',
+                      artistIcon:
                           'https://th.bing.com/th/id/OIP.6uB1w4twL0bPylVHg3jtbwHaGh?w=232&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-                        ),
-                      ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 24, left: 4),
-                      child: CircleAvatar(
-                        radius: 75,
-                        backgroundImage: NetworkImage(
+                    Gap(8),
+                    ArtistIcon(
+                      artistName: 'ReoNa',
+                      artistIcon:
                           'https://th.bing.com/th/id/OIP.6uB1w4twL0bPylVHg3jtbwHaGh?w=232&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-                        ),
-                      ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 24, left: 4),
-                      child: CircleAvatar(
-                        radius: 75,
-                        backgroundImage: NetworkImage(
+                    Gap(8),
+                    ArtistIcon(
+                      artistName: 'ReoNa',
+                      artistIcon:
                           'https://th.bing.com/th/id/OIP.6uB1w4twL0bPylVHg3jtbwHaGh?w=232&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-                        ),
-                      ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 24, left: 4),
-                      child: CircleAvatar(
-                        radius: 75,
-                        backgroundImage: NetworkImage(
+                    Gap(8),
+                    ArtistIcon(
+                      artistName: 'ReoNa',
+                      artistIcon:
                           'https://th.bing.com/th/id/OIP.6uB1w4twL0bPylVHg3jtbwHaGh?w=232&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-                        ),
-                      ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 24, left: 4),
-                      child: CircleAvatar(
-                        radius: 75,
-                        backgroundImage: NetworkImage(
+                    Gap(8),
+                    ArtistIcon(
+                      artistName: 'ReoNa',
+                      artistIcon:
                           'https://th.bing.com/th/id/OIP.6uB1w4twL0bPylVHg3jtbwHaGh?w=232&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-                        ),
-                      ),
+                    ),
+                    Gap(8),
+                    ArtistIcon(
+                      artistName: 'ReoNa',
+                      artistIcon:
+                          'https://th.bing.com/th/id/OIP.6uB1w4twL0bPylVHg3jtbwHaGh?w=232&h=204&c=7&r=0&o=5&dpr=1.3&pid=1.7',
                     ),
                   ],
                 ),
-              ),
-              const SizedBox(
-                height: 100,
               ),
             ],
           ),
